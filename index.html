@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>snekers</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/9a4fd79c93.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="haup">
+    <div class="header">
+      <div class="logo"><img src=images/logo.svg></div>
+      <div class="left">       
+        
+        <ul>
+          <li>Collection</li>
+          <li>Men</li>
+          <li>Woman</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="reight">
+        <div class="corpco">
+        <div class="num" id="num">0</div>
+        <div class="corp"><img src="images/icon-cart.svg"></div>
+      </div>
+        <div class="user"><img src="images/image-avatar.png"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="collections_left">
+        <div class="img_big">
+          <img src="images\image-product-1.jpg" alt="" id="bigImage"class="bigImg">
+        </div>
+        <div class="boxs">
+          <img src="images\image-product-1-thumbnail.jpg" alt="" value=1 id="kleinImage" onclick="imgOpen1()">
+          <img src="images\image-product-2-thumbnail.jpg" alt="" value=2 id="kleinImage"onclick="imgOpen2()">
+          <img src="images\image-product-3-thumbnail.jpg" alt="" value=3 id="kleinImage"onclick="imgOpen3()">
+          <img src="images\image-product-4-thumbnail.jpg" alt="" value=4 id="kleinImage"onclick="imgOpen4()">
+        </div>
+      </div>
+      <div class="collections_reight">
+        <p class="sneaker">Sneakers Company</p>
+        <div class="title">Fall Limited Edition Sneakers</div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+          omnis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+          omnis.
+        </p>
+        <div class="preis_box">
+          <div class="preis" id="preis"><b>$125.00</b></div>
+          <div class="prozent" style="color: red">50%</div>
+        </div>
+        <div class="product">
+          <i class="fa-solid fa-minus" id="decr"onclick="decrF()"></i>
+          <p id="counter">1</p>
+          <i class="fa-solid fa-plus" id="incr" onclick="incrF()"></i>
+        
+                       
+             
+          <button class="addtocart" onclick="addtocart();">
+            <div class="pretext">
+              <i class="fas fa-cart-plus"></i> ADD TO CART
+            </div>
+            <div class="pretext done">
+              <div class="posttext"><i class="fas fa-check"></i> ADDED</div>
+            </div>
+          </button>
+        </div>
+        </div>
+      </div>
+
+      <div class="collections_reight"></div>
+    </div>
+  </div>
+    <script>
+      let counter = document.getElementById("counter");
+      let incr = document.querySelector("incr");
+      let decr = document.querySelector("decr");
+      let preis= document.getElementById("preis")
+      let num= document.getElementById("num");
+      let count = 1;
+
+      function incrF() {
+        count++;
+        counter.innerHTML = count;
+        result = count*125;
+        preis.innerHTML = "$"+result+".00";
+      };
+
+      function decrF() { 
+         while(count>0){       
+        count--;
+        counter.innerHTML = count;
+        result = count*125;
+        preis.innerHTML = "$"+result+".00";
+      }
+      };
+      
+      function addtocart() {
+        num.innerHTML = count;
+      }
+
+      function imgOpen1(){
+        document.getElementById("bigImage").src="images/image-product-1.jpg"
+      }
+      function imgOpen2(){
+        document.getElementById("bigImage").src="images/image-product-2.jpg"
+      }
+      function imgOpen3(){
+        document.getElementById("bigImage").src="images/image-product-3.jpg"
+      }
+      function imgOpen4(){
+        document.getElementById("bigImage").src="images/image-product-4.jpg"
+      }
+
+    </script>
+  </body>
+</html>

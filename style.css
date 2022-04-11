@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  font-family: "Heebo", sans-serif;
+  margin-top: 2em;
+}
+.haup{
+  margin-top: 1rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  margin-top: 5rem;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 0.5rem;
+}
+ul li {
+  padding: 5px;
+  transition: all 200ms;
+}
+ul li:hover{
+  color:gainsboro;
+  cursor: pointer;
+  border-bottom: 1px solid gainsboro;
+}
+.reight {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.logo img {
+  width: 6rem;
+}
+.reight img {
+  width: 40px;
+}
+.corp img {
+  display: flex;
+  width: 1.5rem;
+  gap: 5em;
+  position: relative;
+}
+.num {
+  position: absolut;
+  width:1rem;
+  background-color: green;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+}
+.container {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  padding: 5px;
+  gap: 1rem;
+}
+
+.img_big img {
+  width: 285px;
+  border-radius: 10px;
+}
+
+.boxs {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  gap: 1rem;
+}
+#kleinImage {
+  cursor: pointer;
+  transition: transform 0.1s;
+  z-index: 1;
+  border-radius: 10px;
+}
+#kleinImage:hover {
+  transform: scale(0.9);
+}
+.collections_reight {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.sneaker {
+  color: orangered;
+}
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+p {
+  margin-bottom: 10px;
+}
+.preis_box {
+  display: flex;
+  gap: 0.5rem;
+  font-size: bold;
+}
+.prozent {
+  font-size: 10px;
+  margin-top: 3px;
+}
+.product {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.fa-solid,
+#counter {
+  margin-top: 1.5rem;
+  transform: all 200ms;
+  cursor: pointer;
+}
+.fa-solid:hover {
+  transform: scale(1.1);
+}
+.fa-cart-plus {
+  background: orangered;
+}
+
+.addtocart {
+  display: block;
+
+  border-radius: 5px;
+  font-size: 1em;
+  position: relative;
+  background: orangered;
+  cursor: pointer;
+  height: 5em;
+  width: 5em;
+  overflow: hidden;
+  transition: transform 0.1s;
+  z-index: 1;
+}
+.addtocart:hover {
+  transform: scale(1.1);
+}
+.pretext {
+  color: #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+i {
+  margin-right: 10px;
+}
+.done {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+
+  transform: translate(-110%) skew(-40deg);
+}
+
+.fa-check {
+  background: #be2edd;
+}
